@@ -4,7 +4,7 @@ public class Frog
 	private double yPosition;		
 	private double size;				
 	private String colour;	            
-	Ball f = new Ball(100,100,20,"GREEN");		
+	Ball f = new Ball(xPosition,yPosition,20,"GREEN");		
 	public double getXPosition()
 	{
 		return xPosition;
@@ -39,12 +39,11 @@ public class Frog
 	{
 		return colour;
 	}
-    public Frog (double x, double y, double diameter, String col)
+    public Frog (double x, double y)
 	{
 		xPosition = x;
 		yPosition = y;
-		size = diameter;
-		colour = col;
+		
 	}
 	
 }
