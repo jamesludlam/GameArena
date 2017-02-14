@@ -3,6 +3,8 @@ public class Frogger
 	public static void main(String[] args){
 		GameArena arena = new GameArena(800,800);
 		Frog f = new Frog();
+		arena.addBall(f.f);
+		arena.pause();
 		 while(true)
 		 {
 			 double x = f.getXPosition();
@@ -10,6 +12,6 @@ public class Frogger
 				 f.setXPosition(x+1);
 			 else
 				 f.setXPosition(0);
-		 }	 
+		 }
 	 }
 }
