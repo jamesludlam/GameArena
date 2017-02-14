@@ -2,16 +2,15 @@ public class Frogger
 {
 	public static void main(String[] args){
 		GameArena arena = new GameArena(800,800);
+		car c1 = new car();
 		Frog f = new Frog();
 		arena.addBall(f.f);
-		arena.pause();
+		arena.addRectangle(c1.car);
 		 while(true)
 		 {
-			 double x = f.getXPosition();
-			 if (x < 500)
-				 f.setXPosition(x+1);
-			 else
-				 f.setXPosition(0);
+			c1.move();
+			arena.pause(); 
+			 
 		 }
 	 }
 }
