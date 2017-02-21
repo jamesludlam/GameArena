@@ -1,58 +1,57 @@
 public class Frog
 {
-    private double xPosition = 400;			
-	private double yPosition = 750;		
-	private double size;				
-	private String colour;	            
-	Ball f = new Ball(xPosition,yPosition,20,"GREEN");		
+	private int noRectangles = 1;				
+	Rectangle[] frogs = new Rectangle[noRectangles];
+
+	public Frog()
+	{
+	frogs[0] = new Rectangle(400,750,60,60,"GREEN");	
+	}
+	public int GetNoRectangles()
+	{
+		return noRectangles;
+	}
 	public double getXPosition()
 	{
-		return xPosition;
+		return frogs[0].getXPosition();
 	}
-
-	
 	public double getYPosition()
 	{
-		return yPosition;
+		return frogs[0].getYPosition();
 	}
-
-	
-	public void setXPosition(double x)
+	public void setXPosition(double XPos)
 	{
-		this.xPosition = x;
+		for(int i=0;i<noRectangles;i++)
+		{
+			frogs[i].setXPosition(frogs[i].getXPosition() - frogs[0].getXPosition() + XPos);
+		}
 	}
-
-	
-	public void setYPosition(double y)
+	public void setYPosition(double YPos)
 	{
-		this.yPosition = y;
+		for(int i=0;i<noRectangles;i++)
+		{
+			frogs[i].setYPosition(frogs[i].getYPosition() - frogs[0].getYPosition() + YPos);
+		}
 	}
-
-	
-	public double getSize()
-	{
-		return size;
-	}
-
-	
-	public String getColour()
-	{
-		return colour;
-	}
-	
 	public void up()
 	{
-    f.setYPosition(getYPosition() - 5);
-	yPosition = yPosition-5; 
+		for(int i=0;i<noRectangles;i++)
+		{
+			frogs[i].setYPosition(frogs[i].getYPosition() - 5);
+		}
 	}
 	public void left()
 	{
-	f.setXPosition(getXPosition() - 5);
-	xPosition = xPosition-5; 
+		for(int i=0;i<noRectangles;i++)
+		{
+			frogs[i].setXPosition(frogs[i].getXPosition() - 5);
+		}
 	}
 	public void right()
 	{
-	f.setXPosition(getXPosition() + 5);
-	xPosition = xPosition+5; 
+		for(int i=0;i<noRectangles;i++)
+		{
+			frogs[i].setXPosition(frogs[i].getXPosition() + 5);
+		}
 	}
 }

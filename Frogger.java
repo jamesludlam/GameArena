@@ -8,7 +8,7 @@ public class Frogger
 		Car c2 = new Car(700,50);
 		Car c3 = new Car(100,50);
 		Frog f = new Frog();
-		arena.addBall(f.f);
+		arena.addFrog(f);
 		arena.addCar(c1);
 		arena.addCar(c2);
 		arena.addCar(c3);

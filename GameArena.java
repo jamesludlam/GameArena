@@ -269,6 +269,14 @@ public class GameArena
 		}
 	}
 
+	public void addFrog(Frog f)
+	{
+		for(int i=0;i<f.GetNoRectangles();i++)
+		{
+			addRectangle(f.frogs[i]);
+		}
+	}
+
 	/**
 	 * Remove a Ball from the GameArena. 
 	 * Once a Ball is removed, it will no longer appear on the window. 
