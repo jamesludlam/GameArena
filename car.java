@@ -1,7 +1,7 @@
 public class car
 {
 	private double xposition = 400;
-	private double yposition = 750;
+	private double yposition = 50;
 	private boolean right = true;
 	private double velocity = 1;
 	Rectangle car = new Rectangle(xposition,yposition,60,20,"BLUE");
