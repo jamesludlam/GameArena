@@ -40,10 +40,19 @@ public class Frog
 		return colour;
 	}
 	
-	public void move()
+	public void up()
 	{
-	this.f.setYPosition(getYPosition() - 5);
+    f.setYPosition(getYPosition() - 5);
 	yPosition = yPosition-5; 
 	}
-	
+	public void left()
+	{
+	f.setXPosition(getXPosition() - 5);
+	xPosition = xPosition-5; 
+	}
+	public void right()
+	{
+	f.setXPosition(getXPosition() + 5);
+	xPosition = xPosition+5; 
+	}
 }
