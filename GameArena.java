@@ -261,9 +261,9 @@ public class GameArena
 		}
 	}
 	
-	public void addCar(car d)
+	public void addCar(Car d)
 	{
-		addRectangle(d.car);
+		addRectangle(d.cars[0]);
 	}
 
 	/**
