@@ -260,6 +260,11 @@ public class GameArena
             objectCount++;
 		}
 	}
+	
+	public void addCar(car d)
+	{
+		addRectangle(d.car);
+	}
 
 	/**
 	 * Remove a Ball from the GameArena. 
