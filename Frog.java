@@ -40,4 +40,10 @@ public class Frog
 		return colour;
 	}
 	
+	public void move()
+	{
+	this.f.setYPosition(getYPosition() - 5);
+	yPosition = yPosition-5; 
+	}
+	
 }
