@@ -1,23 +1,35 @@
-public class car
+public class Car
 {
 	private boolean right = true;
 	private double velocity = 1;
-	Rectangle car = new Rectangle(400,50,60,20,"BLUE");
+	private int norectangles = 1;
+	private int nocircles = 0;
+	
+	
+	Rectangle[] cars = new Rectangle[2];
+
+//	cars[0] = Rectangle(400,50,60,20,"BLUE");
+	public Car(double x,double y)
+	{
+	cars[0] = new Rectangle(x,y,60,20,"GREEN");
+	cars[1] = new Rectangle(100,50,60,20,"GREEN");		
+	}
+	
 	public double GetXPos()
 	{
-		return car.getXPosition();
+		return cars[0].getXPosition();
 	}
 	public void SetXPos(double XPos)
 	{
-		car.setXPosition(XPos);
+		cars[0].setXPosition(XPos);
 	}
 	public double GetYPos()
 	{
-		return car.getYPosition();
+		return cars[0].getYPosition();
 	}
 	public void SetYPos(double YPos)
 	{
-		car.setYPosition(YPos);
+		cars[0].setYPosition(YPos);
 	}
 	public double GetVel()
 	{
@@ -30,12 +42,12 @@ public class car
 	public void move()
 	{
 		if(right)
-			car.setXPosition(car.getXPosition() + velocity);
+			cars[0].setXPosition(cars[0].getXPosition() + velocity);
 		else
-			car.setXPosition(car.getXPosition() - velocity);
-		if(car.getXPosition()<-30)
-			car.setXPosition(car.getXPosition() + 860);
-		if(car.getXPosition()>830)
-			car.setXPosition(car.getXPosition() - 860);
+			cars[0].setXPosition(cars[0].getXPosition() - velocity);
+		if(cars[0].getXPosition()<-30)
+			cars[0].setXPosition(cars[0].getXPosition() + 860);
+		if(cars[0].getXPosition()>830)
+			cars[0].setXPosition(cars[0].getXPosition() - 860);
 	}
 }
