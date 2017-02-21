@@ -263,7 +263,10 @@ public class GameArena
 	
 	public void addCar(Car d)
 	{
-		addRectangle(d.cars[0]);
+		for(int i=0;i<d.GetNoRectangles();i++)
+		{
+			addRectangle(d.cars[i]);
+		}
 	}
 
 	/**
