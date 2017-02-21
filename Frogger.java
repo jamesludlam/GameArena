@@ -16,8 +16,16 @@ public class Frogger
 			
 			 if(arena.upPressed())
 		     {
-			   f.move();
+			   f.up();
 		     }
+			 if(arena.leftPressed())
+			 {
+				 f.left();
+			 }
+			 if(arena.rightPressed())
+			 {
+				 f.right();
+			 }
 		 }
 	}
 }
