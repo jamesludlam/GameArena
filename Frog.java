@@ -1,7 +1,7 @@
 public class Frog
 {
     private double xPosition = 400;			
-	private double yPosition = 50;		
+	private double yPosition = 750;		
 	private double size;				
 	private String colour;	            
 	Ball f = new Ball(xPosition,yPosition,20,"GREEN");		
