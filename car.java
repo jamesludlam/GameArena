@@ -3,7 +3,7 @@ public class car
 	private double xposition = 400;
 	private double yposition = 750;
 	private boolean right = true;
-	private double velocity = 0.01;
+	private double velocity = 1;
 	Rectangle car = new Rectangle(xposition,yposition,60,20,"BLUE");
 	public double GetXPos()
 	{
@@ -32,14 +32,12 @@ public class car
 	public void move()
 	{
 		if(right)
-			xposition += velocity;
+			car.setXPosition(car.getXPosition() + velocity);
 		else
-			xposition -= velocity;
-		if(xposition<-30)
-			xposition = 830;
-		if(xposition>830)
-			xposition = -30;
-		car.setXPosition(xposition);
-		car.setYPosition(yposition);
+			car.setXPosition(car.getXPosition() - velocity);
+		if(car.getXPosition()<-30)
+			car.setXPosition(car.getXPosition() + 860);
+		if(car.getXPosition()>830)
+			car.setXPosition(car.getXPosition() - 860);
 	}
 }
