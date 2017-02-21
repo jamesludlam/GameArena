@@ -1,18 +1,20 @@
 public class Car
 {
 	private boolean right = true;
-	private double velocity = 1;
 	private int noRectangles = 5;
 	private int nocircles = 0;
-	public int GetNoRectangles()
+	private double velocity;
+	public int getNoRectangles()
 	{
 		return noRectangles;
 	}
 	
-	Rectangle[] cars = new Rectangle[5];
+	Rectangle[] cars = new Rectangle[noRectangles];
 
-	public Car(double x,double y)
+	public Car(double x,double y,boolean z,double w)
 	{
+	velocity = w;
+	right = z;
 	cars[0] = new Rectangle(x,y,60,20,"BLUE");
 	cars[1] = new Rectangle(x-20,y+12,10,4,"GREEN");
 	cars[2] = new Rectangle(x-20,y-12,10,4,"GREEN");
@@ -27,7 +29,7 @@ public class Car
 	{
 		right = a;
 	}
-	public double GetXPos()
+	public double getXPos()
 	{
 		return cars[0].getXPosition();
 	}
@@ -38,7 +40,7 @@ public class Car
 			cars[i].setXPosition(cars[i].getXPosition() - cars[0].getXPosition() + XPos);
 		}
 	}
-	public double GetYPos()
+	public double getYPos()
 	{
 		return cars[0].getYPosition();
 	}

@@ -7,7 +7,7 @@ public class Frog
 	{
 	frogs[0] = new Rectangle(400,750,60,60,"GREEN");	
 	}
-	public int GetNoRectangles()
+	public int getNoRectangles()
 	{
 		return noRectangles;
 	}

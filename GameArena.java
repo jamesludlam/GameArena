@@ -263,7 +263,7 @@ public class GameArena
 	
 	public void addCar(Car d)
 	{
-		for(int i=0;i<d.GetNoRectangles();i++)
+		for(int i=0;i<d.getNoRectangles();i++)
 		{
 			addRectangle(d.cars[i]);
 		}
@@ -271,7 +271,7 @@ public class GameArena
 
 	public void addFrog(Frog f)
 	{
-		for(int i=0;i<f.GetNoRectangles();i++)
+		for(int i=0;i<f.getNoRectangles();i++)
 		{
 			addRectangle(f.frogs[i]);
 		}
