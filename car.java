@@ -18,9 +18,15 @@ public class Car
 	cars[2] = new Rectangle(x-20,y-12,10,4,"GREEN");
 	cars[3] = new Rectangle(x+20,y+12,10,4,"GREEN");
 	cars[4] = new Rectangle(x+20,y-12,10,4,"GREEN");
-
 	}
-	
+	public boolean getRight()
+	{
+		return right;
+	}
+	public void setRight(boolean a)
+	{
+		right = a;
+	}
 	public double GetXPos()
 	{
 		return cars[0].getXPosition();
