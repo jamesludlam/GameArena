@@ -9,8 +9,7 @@ public class Frogger
 		 while(true)
 		 {
 			c1.move();
-			arena.pause(); 
-			 
+			arena.pause();
 		 }
 	}
 }

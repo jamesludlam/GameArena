@@ -1,25 +1,23 @@
 public class car
 {
-	private double xposition = 400;
-	private double yposition = 50;
 	private boolean right = true;
 	private double velocity = 1;
-	Rectangle car = new Rectangle(xposition,yposition,60,20,"BLUE");
+	Rectangle car = new Rectangle(400,50,60,20,"BLUE");
 	public double GetXPos()
 	{
-		return xposition;
+		return car.getXPosition();
 	}
 	public void SetXPos(double XPos)
 	{
-		xposition = XPos;
+		car.setXPosition(XPos);
 	}
 	public double GetYPos()
 	{
-		return yposition;
+		return car.getYPosition();
 	}
 	public void SetYPos(double YPos)
 	{
-		yposition = YPos;
+		car.setYPosition(YPos);
 	}
 	public double GetVel()
 	{
