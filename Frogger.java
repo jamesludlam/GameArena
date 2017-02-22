@@ -4,6 +4,7 @@ public class Frogger
 	public static void main(String[] args)
 	{
 		int numberofcars = 9;
+		int level = 1;
 	    GameArena arena = new GameArena(800,800);
 		Car[] cars = new Car[numberofcars];
 		cars[0]= new Car(400,50,true,1.2);
@@ -21,6 +22,7 @@ public class Frogger
 		{
 			arena.addCar(cars[i]);
 		}
+		System.out.println("Starting level 1");
 		while(true)
 		{
 			for(int i=0;i<numberofcars;i++)
@@ -28,7 +30,7 @@ public class Frogger
 				cars[i].move();
 				if(cars[i].getXPos()-f.getXPosition()<30 && cars[i].getXPos()-f.getXPosition()>-30 && cars[i].getYPos()-f.getYPosition()<30 && cars[i].getYPos()-f.getYPosition()>-30)
 				{
-				System.out.println("Game Over!");
+				System.out.println("\nGame Over!\nYou made it to level " + level + ".");
 				arena.exit();
 				}
 			}
@@ -45,6 +47,17 @@ public class Frogger
 			if(arena.rightPressed())
 			{
 				f.right();
+			}
+			if(f.getXPosition()<30)
+			{
+				level++;
+				System.out.println("\nLevel complete\nStarting level " + level + ".");
+				for(int i=0;i<numberofcars;i++)
+				{
+					cars[i].setVel(1.2*cars[i].getVel());
+				}
+				f.setXPosition(400);
+				f.setYPosition(750);
 			}
 		}
 	}

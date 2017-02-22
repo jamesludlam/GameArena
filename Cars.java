@@ -51,11 +51,11 @@ public class Car
 			cars[i].setYPosition(cars[i].getYPosition() - cars[0].getYPosition() + YPos);
 		}
 	}
-	public double GetVel()
+	public double getVel()
 	{
 		return velocity;
 	}
-	public void SetVel(double Vel)
+	public void setVel(double Vel)
 	{
 		velocity = Vel;
 	}
