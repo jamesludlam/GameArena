@@ -41,8 +41,10 @@ public class Frogger
 			for(int i=0;i<numberofcars;i++)
 			{
 				cars[i].move();
-				if(cars[i].getXPos()-f.getXPosition()<30 && cars[i].getXPos()-f.getXPosition()>-30 && cars[i].getYPos()-f.getYPosition()<30 && cars[i].getYPos()-f.getYPosition()>-30)
+				if(cars[i].getXPos()-f.getXPosition()<48 && cars[i].getXPos()-f.getXPosition()>-48 && cars[i].getYPos()-f.getYPosition()<40 && cars[i].getYPos()-f.getYPosition()>-30)
 				{
+				for(int j=0;j<100;j++)
+					arena.pause();
 				System.out.println("\nGame Over!\nYou made it to level " + level + ".");
 				arena.exit();
 				}
