@@ -3,7 +3,7 @@ public class Frogger
 
 	public static void main(String[] args)
 	{
-		int numberofcars = 9;
+		int numberofcars = 18;
 		int level = 1;
 		boolean forward = true;
 		boolean left1 = true;
@@ -12,13 +12,23 @@ public class Frogger
 		Car[] cars = new Car[numberofcars];
 		cars[0]= new Car(400,50,true,1.2);
 		cars[1] = new Car(700,50,true,1.2);
-		cars[3] = new Car(100,50,true,1.2);
-		cars[4] = new Car(500,100,false,1);
-		cars[5] = new Car(800,100,false,1);
-		cars[6] = new Car(100,100,false,1);
-		cars[7] = new Car(300,150,true,0.5);
-		cars[8] = new Car(600,150,true,0.5);
-		cars[2] = new Car(0,150,true,0.5);
+		cars[2] = new Car(100,50,true,1.2);
+		cars[3] = new Car(500,100,false,1);
+		cars[4] = new Car(800,100,false,1);
+		cars[5] = new Car(100,100,false,1);
+		cars[6] = new Car(300,150,true,0.5);
+		cars[7] = new Car(600,150,true,0.5);
+		cars[8] = new Car(0,150,true,0.5);
+
+		cars[9]= new Car(400,250,false,1);
+		cars[10] = new Car(700,250,false,1);
+		cars[11] = new Car(100,250,false,1);
+		cars[12] = new Car(500,300,true,1.1);
+		cars[13] = new Car(800,300,true,1.1);
+		cars[14] = new Car(100,300,true,1.1);
+		cars[15] = new Car(300,350,false,0.7);
+		cars[16] = new Car(600,350,false,0.7);
+		cars[17] = new Car(0,350,false,0.7);		
 		Frog f = new Frog();
 		arena.addFrog(f);
 		for(int i=0;i<numberofcars;i++)
