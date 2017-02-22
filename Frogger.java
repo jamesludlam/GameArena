@@ -48,13 +48,13 @@ public class Frogger
 			{
 				f.right();
 			}
-			if(f.getXPosition()<30)
+			if(f.getYPosition()<30)
 			{
 				level++;
 				System.out.println("\nLevel complete\nStarting level " + level + ".");
 				for(int i=0;i<numberofcars;i++)
 				{
-					cars[i].setVel(1.2*cars[i].getVel());
+					cars[i].setVel(1.5*cars[i].getVel());
 				}
 				f.setXPosition(400);
 				f.setYPosition(750);

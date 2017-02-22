@@ -2,7 +2,6 @@ public class Frog
 {
 	private int noRectangles = 1;				
 	Rectangle[] frogs = new Rectangle[noRectangles];
-
 	public Frog()
 	{
 	frogs[0] = new Rectangle(400,750,60,60,"GREEN");	
