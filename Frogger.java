@@ -47,7 +47,7 @@ public class Frogger
 		    }
 			else
 				forward = true;
-			if(arena.leftPressed() && f.getXPosition()>30)
+			if(arena.leftPressed() && f.getXPosition()>50)
 			{
 				if(left1)
 					f.left();
@@ -55,7 +55,7 @@ public class Frogger
 			}
 			else
 				left1 = true;
-			if(arena.rightPressed() && f.getXPosition()<770)
+			if(arena.rightPressed() && f.getXPosition()<750)
 			{
 				if(right1)
 					f.right();
