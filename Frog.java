@@ -1,10 +1,23 @@
 public class Frog
 {
-	private int noRectangles = 1;				
+	private int noRectangles = 14;				
 	Rectangle[] frogs = new Rectangle[noRectangles];
 	public Frog()
 	{
-	frogs[0] = new Rectangle(400,750,60,60,"GREEN");	
+	frogs[0] = new Rectangle(400,750,20,30,"GREEN");
+	frogs[1] = new Rectangle(415,745,10,3,"GREEN");
+	frogs[2] = new Rectangle(415,755,10,3,"GREEN");
+	frogs[3] = new Rectangle(385,745,10,3,"GREEN");
+	frogs[4] = new Rectangle(385,755,10,3,"GREEN");
+	frogs[5] = new Rectangle(419,741,2,8,"GREEN");
+	frogs[6] = new Rectangle(419,759,2,8,"GREEN");
+	frogs[7] = new Rectangle(381,741,2,8,"GREEN");
+	frogs[8] = new Rectangle(381,759,2,8,"GREEN");
+	frogs[9] = new Rectangle(400,753,16,18,"YELLOW");
+	frogs[10] = new Rectangle(406,740,4,4,"WHITE");
+	frogs[11] = new Rectangle(394,740,4,4,"WHITE");
+	frogs[12] = new Rectangle(406,740,2,2,"BLACK");
+	frogs[13] = new Rectangle(394,740,2,2,"BLACK");
 	}
 	public int getNoRectangles()
 	{
