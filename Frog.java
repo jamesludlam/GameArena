@@ -43,14 +43,14 @@ public class Frog
 	{
 		for(int i=0;i<noRectangles;i++)
 		{
-			frogs[i].setXPosition(frogs[i].getXPosition() - 5);
+			frogs[i].setXPosition(frogs[i].getXPosition() - 50);
 		}
 	}
 	public void right()
 	{
 		for(int i=0;i<noRectangles;i++)
 		{
-			frogs[i].setXPosition(frogs[i].getXPosition() + 5);
+			frogs[i].setXPosition(frogs[i].getXPosition() + 50);
 		}
 	}
 }
