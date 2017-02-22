@@ -31,6 +31,10 @@ public class Rectangle
 	{
 		return xPosition;
 	}
+	public void setColour(String s)
+	{
+		colour = s;
+	}
 
 	/**
 	 * Obtains the current position of this Rectangle.

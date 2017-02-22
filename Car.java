@@ -15,7 +15,7 @@ public class Car
 	{
 	velocity = w;
 	right = z;
-	cars[0] = new Rectangle(x,y,60,20,"BLUE");
+	cars[0] = new Rectangle(x,y,60,20,colour());
 	cars[1] = new Rectangle(x-20,y+12,10,4,"GRAY");
 	cars[2] = new Rectangle(x-20,y-12,10,4,"GRAY");
 	cars[3] = new Rectangle(x+20,y+12,10,4,"GRAY");
@@ -24,6 +24,10 @@ public class Car
 		cars[5] = new Rectangle(x+20,y,12,15,"LIGHTGRAY");
 	else
 		cars[5] = new Rectangle(x-20,y,12,15,"LIGHTGRAY");
+	}
+	public void changeColour()
+	{
+		cars[0].setColour(colour());
 	}
 	public boolean getRight()
 	{
@@ -71,10 +75,29 @@ public class Car
 				cars[i].setXPosition(cars[i].getXPosition() + velocity);
 			else
 				cars[i].setXPosition(cars[i].getXPosition() - velocity);
-			if(cars[i].getXPosition()<-30)
-				cars[i].setXPosition(cars[i].getXPosition() + 860);
-			if(cars[i].getXPosition()>830)
-				cars[i].setXPosition(cars[i].getXPosition() - 860);
+			if(cars[i].getXPosition()<-50)
+			{
+				cars[i].setXPosition(cars[i].getXPosition() + 900);
+				changeColour();
+			}
+			if(cars[i].getXPosition()>850)
+			{
+				cars[i].setXPosition(cars[i].getXPosition() - 900);
+				changeColour();
+			}
 		}
+	}
+	private String colour()
+	{
+		int colournumber = (int)(5*Math.random());
+		if(colournumber == 0)
+			return "BLUE";
+		if(colournumber == 1)
+			return "RED";
+		if(colournumber == 2)
+			return "CYAN";
+		if(colournumber == 3)
+			return "ORANGE";
+		return "WHITE";
 	}
 }
