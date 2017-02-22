@@ -5,6 +5,7 @@ public class Frogger
 	{
 		int numberofcars = 9;
 		int level = 1;
+		boolean forward = true;
 	    GameArena arena = new GameArena(800,800);
 		Car[] cars = new Car[numberofcars];
 		cars[0]= new Car(400,50,true,1.2);
@@ -36,11 +37,15 @@ public class Frogger
 			}
 			arena.pause();
 			
-			if(arena.upPressed() && f.getXPosition()>30)
+			if(arena.upPressed())
 		    {
-				f.up();
+				if(forward == true)
+					f.up();
+				forward = false;
 		    }
-			if(arena.leftPressed())
+			else
+				forward = true;
+			if(arena.leftPressed() && f.getXPosition()>30)
 			{
 				f.left();
 			}

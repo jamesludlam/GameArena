@@ -36,7 +36,7 @@ public class Frog
 	{
 		for(int i=0;i<noRectangles;i++)
 		{
-			frogs[i].setYPosition(frogs[i].getYPosition() - 5);
+			frogs[i].setYPosition(frogs[i].getYPosition() - 50);
 		}
 	}
 	public void left()
