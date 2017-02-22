@@ -58,7 +58,7 @@ public class Frogger
 			for(int i=0;i<numberoflorrys;i++)
 			{
 				lorrys[i].move();
-				if(lorrys[i].getXPos()-f.getXPosition()<48 && lorrys[i].getXPos()-f.getXPosition()>-48 && lorrys[i].getYPos()-f.getYPosition()<40 && lorrys[i].getYPos()-f.getYPosition()>-30)
+				if(lorrys[i].getXPos()-f.getXPosition()<69 && lorrys[i].getXPos()-f.getXPosition()>-69 && lorrys[i].getYPos()-f.getYPosition()<40 && lorrys[i].getYPos()-f.getYPosition()>-30)
 				{
 				for(int j=0;j<100;j++)
 					arena.pause();
