@@ -43,7 +43,7 @@ public class Car
 	}
 	public void SetXPos(double XPos)
 	{
-		for(int i=0;i<noRectangles;i++)
+		for(int i=noRectangles-1;i>-1;i--)
 		{
 			cars[i].setXPosition(cars[i].getXPosition() - cars[0].getXPosition() + XPos);
 		}
@@ -54,7 +54,7 @@ public class Car
 	}
 	public void SetYPos(double YPos)
 	{
-		for(int i=0;i<noRectangles;i++)
+		for(int i=noRectangles-1;i>-1;i--)
 		{
 			cars[i].setYPosition(cars[i].getYPosition() - cars[0].getYPosition() + YPos);
 		}
@@ -75,14 +75,14 @@ public class Car
 				cars[i].setXPosition(cars[i].getXPosition() + velocity);
 			else
 				cars[i].setXPosition(cars[i].getXPosition() - velocity);
-			if(cars[i].getXPosition()<-50)
+			if(cars[i].getXPosition()<-100)
 			{
-				cars[i].setXPosition(cars[i].getXPosition() + 900);
+				cars[i].setXPosition(cars[i].getXPosition() + 1000);
 				changeColour();
 			}
-			if(cars[i].getXPosition()>850)
+			if(cars[i].getXPosition()>900)
 			{
-				cars[i].setXPosition(cars[i].getXPosition() - 900);
+				cars[i].setXPosition(cars[i].getXPosition() - 1000);
 				changeColour();
 			}
 		}

@@ -269,6 +269,14 @@ public class GameArena
 		}
 	}
 
+	public void addLorry(Lorry l)
+	{
+		for(int i=0;i<l.getNoRectangles();i++)
+		{
+			addRectangle(l.lorrys[i]);
+		}
+	}
+
 	public void addFrog(Frog f)
 	{
 		for(int i=0;i<f.getNoRectangles();i++)
