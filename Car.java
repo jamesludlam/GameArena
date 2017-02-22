@@ -1,7 +1,7 @@
 public class Car
 {
 	private boolean right = true;
-	private int noRectangles = 5;
+	private int noRectangles = 6;
 	private int nocircles = 0;
 	private double velocity;
 	public int getNoRectangles()
@@ -16,10 +16,14 @@ public class Car
 	velocity = w;
 	right = z;
 	cars[0] = new Rectangle(x,y,60,20,"BLUE");
-	cars[1] = new Rectangle(x-20,y+12,10,4,"GREEN");
-	cars[2] = new Rectangle(x-20,y-12,10,4,"GREEN");
-	cars[3] = new Rectangle(x+20,y+12,10,4,"GREEN");
-	cars[4] = new Rectangle(x+20,y-12,10,4,"GREEN");
+	cars[1] = new Rectangle(x-20,y+12,10,4,"GRAY");
+	cars[2] = new Rectangle(x-20,y-12,10,4,"GRAY");
+	cars[3] = new Rectangle(x+20,y+12,10,4,"GRAY");
+	cars[4] = new Rectangle(x+20,y-12,10,4,"GRAY");
+	if(z)
+		cars[5] = new Rectangle(x+20,y,12,15,"LIGHTGRAY");
+	else
+		cars[5] = new Rectangle(x-20,y,12,15,"LIGHTGRAY");
 	}
 	public boolean getRight()
 	{
