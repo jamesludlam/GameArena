@@ -36,7 +36,7 @@ public class Frogger
 			}
 			arena.pause();
 			
-			if(arena.upPressed())
+			if(arena.upPressed() && f.getXPosition()>30)
 		    {
 				f.up();
 		    }
@@ -44,7 +44,7 @@ public class Frogger
 			{
 				f.left();
 			}
-			if(arena.rightPressed())
+			if(arena.rightPressed() && f.getXPosition()<770)
 			{
 				f.right();
 			}
